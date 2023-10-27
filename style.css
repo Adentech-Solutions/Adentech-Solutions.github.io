@@ -63,6 +63,9 @@ main {
   padding: 20px;
   border-radius: 10px;
   background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   position: relative;
   overflow: hidden;
 }
