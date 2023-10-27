@@ -64,8 +64,8 @@ main {
   border-radius: 10px;
   background-color: #fff;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
   position: relative;
   overflow: hidden;
 }
@@ -79,42 +79,33 @@ main {
 .service h3 {
   font-size: 24px;
   margin: 10px 0;
-  color: #333; /* Füge diese Zeile hinzu, um die Textfarbe zu setzen */
 }
 
 .service p {
-  color: #333; /* Füge diese Zeile hinzu, um die Textfarbe zu setzen */
+  padding: 0 20px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  text-align: center;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .service:hover img {
   transform: scale(1.1);
 }
 
-.service::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.service:hover::before {
+.service:hover p {
   opacity: 1;
 }
-
-.service:hover h3,
-.service:hover p {
-  color: #fff;
-}
-
 
 footer {
   background-color: #333;
