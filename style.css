@@ -79,6 +79,11 @@ main {
 .service h3 {
   font-size: 24px;
   margin: 10px 0;
+  color: #333; /* Füge diese Zeile hinzu, um die Textfarbe zu setzen */
+}
+
+.service p {
+  color: #333; /* Füge diese Zeile hinzu, um die Textfarbe zu setzen */
 }
 
 .service:hover img {
@@ -109,6 +114,7 @@ main {
 .service:hover p {
   color: #fff;
 }
+
 
 footer {
   background-color: #333;
