@@ -94,5 +94,19 @@
     <p>Email: Adentech.it@gmail.com</p>
     <p>Tel:+49 89 68004 - 221</p>
   </footer>
+  <script>
+    // Get all service elements
+    const serviceItems = document.querySelectorAll('.service');
+  
+    // Add a click event listener to each service element
+    serviceItems.forEach(service => {
+      const img = service.querySelector('img');
+      const description = service.querySelector('p');
+  
+      img.addEventListener('click', () => {
+        description.classList.toggle('show-description');
+      });
+    });
+  </script>
 </body>
 </html>
