@@ -91,19 +91,27 @@
       <a href="#">Mehr lesen</a>
     </section>
     <section class="contact">
-      <h2>Kontaktieren Sie uns</h2>
+      <h2>Contact Us</h2>
       <form action="send.php" method="post">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
-  
+    
         <label for="email">E-Mail:</label>
         <input type="email" id="email" name="email" required>
-  
-        <label for="message">Nachricht:</label>
+    
+        <label for="message">Message:</label>
         <textarea id="message" name="message" required></textarea>
-  
-        <input type="submit" value="Nachricht senden">
+    
+        <div class="captcha"> <!-- Add CAPTCHA or reCAPTCHA here for antispam -->
+          <!-- Your CAPTCHA/reCAPTCHA code goes here -->
+        </div>
+    
+        <input type="submit" value="Send Message">
       </form>
+      <div class="confirmation">
+        <!-- Display confirmation message here after successful form submission -->
+        <!-- For the confirmation message, you can add a div or a modal that appears after successful submission, thanking the user for their message. -->
+      </div>
     </section>
   </main>
   <footer>
