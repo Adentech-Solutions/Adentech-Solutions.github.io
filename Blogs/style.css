@@ -1,0 +1,50 @@
+/* Allgemeine Stile für die Webseite */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+  }
+  
+  .logo img {
+    width: 100px; /* Passen Sie die Breite nach Bedarf an */
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  /* Stile für die Blog-Seite */
+  .blog {
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  article {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+  }
+  
+  comments {
+    margin-top: 20px;
+  }
+  
+  /* Weitere Stile hier */
+  
+  /* Media Queries für responsives Design */
+  @media screen and (max-width: 600px) {
+    body {
+      font-size: 14px;
+    }
+  
+    /* Weitere Anpassungen für kleinere Bildschirme */
+  }
+  
