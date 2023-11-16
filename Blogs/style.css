@@ -1,4 +1,11 @@
-body {
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     background-color: #f5f5f5;
   }
@@ -18,13 +25,13 @@ body {
   }
   
   .logo img {
-    width: 290px; /* Größe nach Bedarf anpassen */
+    width: 290px; /* Adjust the size as needed */
     height: auto;
-    margin-right: 10px; /* Abstand zwischen Logo und Text hinzufügen */
+    margin-right: 10px; /* Add some spacing between the logo and text */
   }
   
   .logo h1 {
-    font-size: 24px; /* Schriftgröße nach Bedarf anpassen */
+    font-size: 24px; /* Adjust the font size as needed */
     font-weight: bold;
   }
   
