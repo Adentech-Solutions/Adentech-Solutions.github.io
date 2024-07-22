@@ -1,49 +1,104 @@
 import React from "react";
-export const Navigation = (props) => {
-  return (
-    <nav id="menu" className="navbar navbar-default navbar-fixed-top">
-      <div className="container">
-        <div className="navbar-header">
-          <button
-            type="button"
-            className="navbar-toggle collapsed"
-            data-toggle="collapse"
-            data-target="#bs-example-navbar-collapse-1"
-          >
-            {" "}
-            <span className="sr-only">Toggle navigation</span>{" "}
-            <span className="icon-bar"></span>{" "}
-            <span className="icon-bar"></span>{" "}
-            <span className="icon-bar"></span>{" "}
-          </button>
-          <a className="navbar-brand page-scroll" href="#page-top">
-            Aden Cloud
-          </a>{" "}
-        </div>
+import "./header.css";
 
-        <div
-          className="collapse navbar-collapse"
-          id="bs-example-navbar-collapse-1"
-        >
-          <ul className="nav navbar-nav navbar-right">
+const Header = () => {
+  const [showModal, setshowModal] = useState(false);
+  const [theme, setTheme] = useState(
+    localStorage.getItem("currentMode") ?? "dark"
+  );
+
+  useEffect(() => {
+    if (theme === "light") {
+      document.body.classList.remove("dark");
+      document.body.classList.add("light");
+    } else {
+      document.body.classList.remove("light");
+      document.body.classList.add("dark");
+    }
+  }, [theme]);
+
+  return (
+    <header className="  flex">
+      <button
+        onClick={() => {
+          setshowModal(true);
+        }}
+        className="menu icon-menu flex"
+      >
+        {" "}
+      </button>
+      <div />
+
+      <nav>
+        <ul className="flex">
+          <li>
+            <a href="">About</a>
+          </li>
+
+          <li>
+            <a href="">Articles</a>
+          </li>
+          <li>
+            <a href="">Projects</a>
+          </li>
+          <li>
+            <a href="">Speaking</a>
+          </li>
+          <li>
+            <a href="">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <button
+        onClick={() => {
+          // Send value to LS
+          localStorage.setItem(
+            "currentMode",
+            theme === "dark" ? "light" : "dark"
+          );
+
+          // get value from LS
+          setTheme(localStorage.getItem("currentMode"));
+        }}
+        className="mode flex"
+      >
+        {theme === "dark" ? (
+          <span className="icon-moon-o"> </span>
+        ) : (
+          <span className="icon-sun"> </span>
+        )}
+      </button>
+
+      {showModal && (
+        <div className="fixed">
+          <ul className="modal ">
             <li>
-              <a href="#services" className="page-scroll">
-                Services
-              </a>
+              <button
+                className="icon-close"
+                onClick={() => {
+                  setshowModal(false);
+                }}
+              />
             </li>
             <li>
-              <a href="#about" className="page-scroll">
-                About
-              </a>
+              <a href="">About</a>
             </li>
             <li>
-              <a href="#contact" className="page-scroll">
-                Contact
-              </a>
+              <a href="">Articles</a>
+            </li>
+            <li>
+              <a href="">Projects</a>
+            </li>
+            <li>
+              <a href="">Speaking</a>
+            </li>
+            <li>
+              <a href="">Uses</a>
             </li>
           </ul>
         </div>
-      </div>
-    </nav>
+      )}
+    </header>
   );
 };
